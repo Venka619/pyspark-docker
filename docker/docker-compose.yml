@@ -1,7 +1,9 @@
 version: "3.3"
 services:
   spark-master:
-    image: spark:latest
+    build:
+      context: .
+      dockerfile: Dockerfile    
     container_name: spark-master
     hostname: spark-master
     ports:
@@ -14,8 +16,11 @@ services:
       - "SPARK_MASTER_PORT=7077"
       - "SPARK_MASTER_WEBUI_PORT=8080"
     command: "/start-master.sh"
+    
   spark-worker:
-    image: spark:latest
+    build:
+      context: .
+      dockerfile: Dockerfile  
     depends_on:
       - spark-master
     ports:
