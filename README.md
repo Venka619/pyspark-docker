@@ -6,7 +6,8 @@ https://towardsdatascience.com/a-journey-into-big-data-with-apache-spark-part-1-
 
 1. run the cluster: `docker-compose up`
 
-2. to interact with spark, run another docker instance like so: `docker run --rm -it --network docker_spark-network \
-    spark:latest /bin/sh`
+3. go to: `http://localhost:8080` to see the sparkUI
 
-3. then when in the shell, for example run: `/spark/bin/spark-submit --master spark://spark-master:7077 /spark/examples/src/main/python/pi.py  1000`
+4. to interact with spark, run another docker instance like so: `docker run --rm -it --network docker_spark-network spark:latest /bin/sh`
+
+5. then when in the shell, for example run: `/spark/bin/spark-submit --master spark://spark-master:7077 /spark/examples/src/main/python/pi.py  1000`
