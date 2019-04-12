@@ -7,4 +7,5 @@ https://towardsdatascience.com/a-journey-into-big-data-with-apache-spark-part-1-
 to start run: `docker-compose up`
 
 to interact with spark, run another docker instance like so: `docker run --rm -it --network docker_spark-network \
-    spark:latest /bin/sh`, e.g. to test run `/spark/bin/spark-submit --master spark://spark-master:7077 /spark/examples/src/main/python/pi.py  1000`
+    spark:latest /bin/sh`
+then when in the shell, for example run: `/spark/bin/spark-submit --master spark://spark-master:7077 /spark/examples/src/main/python/pi.py  1000`
